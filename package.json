@@ -11,7 +11,7 @@
   },
   "author": "",
   "license": "ISC",
-    "devDependencies": {
+  "devDependencies": {
     "css-loader": "^6.8.1",
     "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
