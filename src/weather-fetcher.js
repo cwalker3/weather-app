@@ -7,20 +7,14 @@ const FORECAST_URL = `${BASE_URL}${FORECAST_METHOD}?key=${API_KEY}&days=${DAYS}&
 export async function getWeather(location) {
   try {
     const response = await fetch(FORECAST_URL + location);
-    if (response.ok) {
-      return response.json();
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error.message);
     } else {
-      const errorMessage = await _getErrorMessage(response);
-      throw new Error(errorMessage);
+      return response.json();
     }
   } catch (error) {
     console.error('Error fetching forecast:', error);
     throw error;
   }
-}
-
-async function _getErrorMessage(response) {
-  const data = await response.json();
-  const errorMessage = data.error.message;
-  return errorMessage;
 }
