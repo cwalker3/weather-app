@@ -1,5 +1,107 @@
 @import url(~sanitize.css);
 
+:root {
+  --header-color: #005986;
+  --body-color: #d0eaeb;
+  --form-color: #337a9e;
+  --main-color: white;
+  --nav-color: #003550;
+
+  --font-color-primary: white;
+  --font-color-secondary: black;
+
+  --main-width: min(900px, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  background-color: var(--header-color);
+  color: var(--font-color-primary);
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    vertical-align: bottom;
+    line-height: 50px;
+  }
+
+  .unit-container {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--form-color);
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+main {
+  color: var(--font-color-secondary);
+  background-color: #fff;
+  width: var(--main-width);
+  height: 500px;
+  border-radius: 10px;
+  nav {
+    background-color: var(--nav-color);
+    color: var(--font-color-primary);
+    border-radius: 10px 10px 0 0;
+    padding: 8px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+      font-weight: bold;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+
+        .day {
+          width: 150px;
+        }
+
+        .info {
+          width: 150px;
+          display: flex;
+          align-items: center;
+
+          img {
+            max-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .loading {
   position: fixed;
   top: 0;
@@ -11,4 +113,29 @@
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    padding: 8px 16px;
+  }
+
+  form {
+    padding: 12px 24px;
+  }
+
+  main {
+    nav {
+      ul {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+          display: block;
+        }
+      }
+    }
+  }
 }

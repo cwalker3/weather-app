@@ -11,7 +11,7 @@ export async function getWeather(location) {
     if (data.error) {
       throw new Error(data.error.message);
     } else {
-      return response.json();
+      return data;
     }
   } catch (error) {
     console.error('Error fetching forecast:', error);

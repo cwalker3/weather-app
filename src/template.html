@@ -6,9 +6,55 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+  <header>
+    <h1>Weather App</h1>
+      
+    <div class="unit-container"></div>
+  </header>
+
   <form class="location-form">
-    <input type="text" placeholder='Location' class="location">
+    <input type="text" placeholder='Enter a location' id="location">
+    <button>Get Forecast</button>
   </form>
+
+  <main>
+    <nav>
+      <ul>
+        <li>
+          <div class="day">Current</div>
+          <div class="info">
+            <div class="preview">95 / 54</div>
+            <img class='preview-img' src="" alt="">
+          </div>
+        </li>
+        <li>
+          <div class="day">Today</div>
+          <div class="info">
+            <div class="preview">95 / 54</div>
+            <img class='preview-img' src="" alt="">
+          </div>
+        </li>
+        <li>
+          <div class="day">Tomorrow</div>
+          <div class="info">
+            <div class="preview">95 / 54</div>
+            <img class='preview-img' src="" alt="">
+          </div>
+        </li>
+        <li>
+          <div class='day two-days'>2 days</div>
+          <div class="info">
+            <div class="preview">95 / 54</div>
+            <img class='preview-img' src="" alt="">
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="weather-display">
+
+    </div>
+  </main>
+
   <div class="loading hidden"></div>
 </body>
 </html>
