@@ -1,4 +1,4 @@
-const BASE_URL = 'http://api.weatherapi.com/v1';
+const BASE_URL = 'https://api.weatherapi.com/v1';
 const API_KEY = 'fb9da5dcb2d94ad7ae0224616230808';
 const FORECAST_METHOD = '/forecast.json';
 const DAYS = '3';
